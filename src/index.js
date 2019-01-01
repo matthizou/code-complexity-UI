@@ -12,7 +12,6 @@ import { configureStore } from './common/configureStore'
 import { theme } from './style/theme'
 import { BrowserRouter } from 'react-router-dom'
 import { App } from './components/App'
-import { Button } from './components'
 
 const store = configureStore()
 // addLocaleData([...en, ...es])

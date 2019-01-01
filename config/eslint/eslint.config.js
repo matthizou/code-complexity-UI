@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
   plugins: ['react', 'prettier'],
 
   parserOptions: {
@@ -12,7 +12,6 @@ module.exports = {
 
   rules: {
     semi: ['error', 'never'],
-    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     'react/jsx-uses-react': 1,
     quotes: ['error', 'single'],

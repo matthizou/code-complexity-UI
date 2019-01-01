@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack/webpack-development.config --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "generate": "node ./scripts/generateGraphData ../../Temp/vimium"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -16,6 +17,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^7.0.0",
+    "code-complexity-evaluator": "https://github.com/matthizou/code-complexity-evaluator.git",
     "css-loader": "^2.1.0",
     "eslint": "^5.11.1",
     "eslint-config-prettier": "^3.3.0",
@@ -36,6 +38,7 @@
     "extends": "./config/eslint/eslint.config.js"
   },
   "dependencies": {
+    "chalk": "^2.4.1",
     "minireset.css": "^0.0.3",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",

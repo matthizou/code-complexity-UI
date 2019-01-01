@@ -24,7 +24,6 @@ export default function reducer(state = INITIAL_STATE, action = {}) {
 }
 
 // ACTION CREATORS
-
 export const getCounter = () => ({
   type: GET_COUNTER,
 })

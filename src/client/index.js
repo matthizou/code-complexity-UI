@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
-import { ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 // import { IntlProvider, addLocaleData } from 'react-intl'
 // import en from 'react-intl/locale-data/en'
 // import es from 'react-intl/locale-data/es'
@@ -16,15 +16,23 @@ import { App } from './components/App'
 const store = configureStore()
 // addLocaleData([...en, ...es])
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: red;
+    background-color: #DDD;
+  }
+`
+
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <App />
+        <React.Fragment>
+          <App />
+          <GlobalStyle />
+        </React.Fragment>
       </BrowserRouter>
     </ThemeProvider>
   </Provider>,
   document.getElementById('root'),
 )
-
-// Global style: Use injectGlobal``  from styled-components

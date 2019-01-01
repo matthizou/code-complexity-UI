@@ -1,1 +1,1 @@
-Base for my React projects
+WIP - Nothing to show yet
